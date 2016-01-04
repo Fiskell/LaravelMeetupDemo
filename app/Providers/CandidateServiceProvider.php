@@ -1,5 +1,6 @@
 <?php namespace App\Providers;
 
+use App\Examples\StrategyPattern\Candidates\BaseCandidate;
 use App\Examples\StrategyPattern\Candidates\Clinton;
 use App\Examples\StrategyPattern\Candidates\Sanders;
 use App\Examples\StrategyPattern\Candidates\Trump;
@@ -26,6 +27,10 @@ class CandidateServiceProvider extends ServiceProvider
 
         $this->app->bind('Bernie', function() {
             return new Sanders();
+        });
+
+        $this->app->bind('BaseCandidate', function() {
+            return new BaseCandidate();
         });
     }
 }
