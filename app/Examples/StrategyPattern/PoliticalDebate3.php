@@ -6,6 +6,7 @@ class PoliticalDebate3 implements DebateInterface
         try {
             return app($candidateName)->getSpeech();
         } catch (\ReflectionException $ex) {
+            return app('BaseCandidate')->getSpeech();
         }
     }
 }
