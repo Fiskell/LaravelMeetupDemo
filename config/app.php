@@ -156,6 +156,11 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /*
+         * Laravel Meetup Demo Service Providers...
+         */
+        App\Providers\CandidateServiceProvider::class,
+
     ],
 
     /*
