@@ -11,7 +11,7 @@ class PoliticalDebate implements DebateInterface
             case 'Bernie':
                 return 'Rich people suck';
             default:
-                return '404 candidate not found';
+                throw new \Exception('404 candidate speech not found');
         }
     }
 }
