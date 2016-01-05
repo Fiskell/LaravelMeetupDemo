@@ -22,6 +22,6 @@ class Reunion extends Command
      */
     public function handle(Container $container, KyloRen $kyloRen)
     {
-        $container->call([$kyloRen, 'talkToDad']);
+        $container->call([$kyloRen, 'talkToDad'],['speech' => 'Im in a gang, Im cool now!']);
     }
 }

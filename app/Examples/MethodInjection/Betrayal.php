@@ -3,6 +3,6 @@
 class Betrayal {
 
     public function doSomethingMean() {
-        echo 'Stab dad through the heart with a lightsaber';
+        echo "Stab dad through the heart with a lightsaber\n";
     }
 }
