@@ -13,7 +13,8 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        Commands\Debate::class
+        Commands\Debate::class,
+        Commands\Reunion::class,
     ];
 
     /**
