@@ -15,9 +15,11 @@ class CandidateServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        // TODO don't always want to bind like this, give more examples
+        $this->app->bind('BaseCandidate', function() {
+            return new BaseCandidate();
+        });
 
-        $this->app->bind('TheDonald', function() {
+        $this->app->singleton('TheDonald', function() {
             return new Trump();
         });
 
@@ -25,12 +27,6 @@ class CandidateServiceProvider extends ServiceProvider
             return new Clinton();
         });
 
-        $this->app->bind('Bernie', function() {
-            return new Sanders();
-        });
-
-        $this->app->bind('BaseCandidate', function() {
-            return new BaseCandidate();
-        });
+        $this->app->bind('Bernie', 'App\Examples\StrategyPattern\Candidates\Sanders');
     }
 }
