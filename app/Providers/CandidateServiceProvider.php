@@ -15,6 +15,8 @@ class CandidateServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        // TODO check out contextual binding
+        
         $this->app->bind('BaseCandidate', function() {
             return new BaseCandidate();
         });
