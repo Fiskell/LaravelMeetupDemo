@@ -1,6 +1,8 @@
-<?php namespace App\Examples\Stitch\Orders\v2;
+<?php namespace App\Examples\Stitch\Orders;
 
-class EloquentOrderRepository
+use App\Examples\Stitch\Orders\v2\OrderInterface;
+
+class EloquentOrderRepository implements OrderInterface
 {
 
 }
