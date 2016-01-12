@@ -5,7 +5,7 @@ use App\Examples\GuzzleExample\Wunderlist;
 use GuzzleHttp\Client;
 use Illuminate\Support\ServiceProvider;
 
-class CandidateServiceProvider extends ServiceProvider
+class GuzzleExampleServiceProvider extends ServiceProvider
 {
     /**
      * Register any application services.

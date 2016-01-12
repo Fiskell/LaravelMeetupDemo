@@ -160,6 +160,8 @@ return [
          * Laravel Meetup Demo Service Providers...
          */
         App\Providers\CandidateServiceProvider::class,
+        App\Providers\GuzzleExampleServiceProvider::class,
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
 
     ],
 

@@ -2,7 +2,8 @@
 
 use GuzzleHttp\Client;
 
-class Wunderlist {
+class Wunderlist
+{
     public static $BASE_URL = "https://a.wunderlist.com";
     /**
      * @var Client
@@ -24,29 +25,17 @@ class Wunderlist {
             $lists      = $this->client->request('GET', '/api/v1/lists', [
                 'headers' => $this->getDefaultHeaders()
             ]);
+
             $lists      = json_decode($lists->getBody()->getContents(), true);
             $listsNames = [];
             foreach ($lists as $list) {
-                $listsNames[strtolower($list['title'])] = $list['id'];
+                $listsNames[] = strtolower($list['title']);
             }
+
             ksort($listsNames);
             print_r($listsNames);
         } catch (\Exception $ex) {
             dd($ex->getMessage());
         }
     }
-
-
-    function doSomeStuff() {
-        $foo = new foo();
-        $this->thing($foo);
-    }
-
-    function thing(foo $foo) {
-        echo $foo->toString();
-    }
-}
-
-class foo {
-
 }

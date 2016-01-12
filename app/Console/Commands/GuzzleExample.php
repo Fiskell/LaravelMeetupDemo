@@ -24,7 +24,7 @@ class GuzzleExample extends Command
 //        $github = new Github();
 //        $github->getInfo('Fiskell');
 
-        $google = new Wunderlist();
+        $google = app('Wunderlist');
         $google->getLists();
     }
 }
