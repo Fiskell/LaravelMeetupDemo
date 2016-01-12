@@ -15,6 +15,7 @@ class Kernel extends ConsoleKernel
     protected $commands = [
         Commands\Debate::class,
         Commands\Reunion::class,
+        Commands\GuzzleExample::class,
     ];
 
     /**
