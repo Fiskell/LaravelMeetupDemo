@@ -1,6 +1,4 @@
-<?php
-
-namespace App\Console\Commands;
+<?php namespace App\Console\Commands;
 
 use App\Examples\GuzzleExample\Wunderlist;
 use Illuminate\Console\Command;
@@ -19,12 +17,9 @@ class GuzzleExample extends Command
      *
      * @return mixed
      */
-    public function handle()
-    {
-//        $github = new Github();
-//        $github->getInfo('Fiskell');
+    public function handle() {
 
-        $google = app('Wunderlist');
-        $google->getLists();
+        $wunderlist = new Wunderlist();
+        dd($wunderlist->getLists());
     }
 }

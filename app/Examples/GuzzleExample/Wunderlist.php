@@ -10,8 +10,11 @@ class Wunderlist
      */
     protected $client;
 
-    public function __construct(Client $client) {
-        $this->client = $client;
+    public function __construct() {
+        // TODO ahhh Wunderlist knows how to instantiate a guzzle client!
+        $this->client = new Client(
+            ['base_uri' => Wunderlist::$BASE_URL]
+        );
     }
 
     public function getDefaultHeaders() {
@@ -22,18 +25,20 @@ class Wunderlist
 
     function getLists() {
         try {
-            $lists      = $this->client->request('GET', '/api/v1/lists', [
+            $lists = $this->client->request('GET', '/api/v1/lists', [
                 'headers' => $this->getDefaultHeaders()
             ]);
 
             $lists      = json_decode($lists->getBody()->getContents(), true);
             $listsNames = [];
+
             foreach ($lists as $list) {
                 $listsNames[] = strtolower($list['title']);
             }
 
             ksort($listsNames);
-            print_r($listsNames);
+
+            return $listsNames;
         } catch (\Exception $ex) {
             dd($ex->getMessage());
         }
