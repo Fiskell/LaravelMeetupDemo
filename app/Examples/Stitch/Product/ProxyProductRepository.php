@@ -2,6 +2,12 @@
 
 class ProxyProductRepository implements ProductRepositoryInterface
 {
+    protected $model;
+
+    public function __construct(Product $product) {
+        $this->model = $product;
+    }
+
     /**
      * @return Product []
      */
