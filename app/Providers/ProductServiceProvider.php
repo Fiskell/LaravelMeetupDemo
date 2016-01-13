@@ -15,7 +15,7 @@ class ProductServiceProvider extends ServiceProvider
             'App\Examples\Stitch\Product\ProductRepositoryInterface',
             'App\Examples\Stitch\Product\ProxyProductRepository');
 
-        // TODO switch when we are ready to switch off of proxy
+        // TODO switch when we are ready to move off of proxy
 //        $this->app->bind(
 //            'App\Examples\Stitch\Product\ProductRepositoryInterface',
 //            'App\Examples\Stitch\Product\EloquentProductRepository');
