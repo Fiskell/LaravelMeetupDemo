@@ -18,8 +18,7 @@ class GuzzleExample extends Command
      * @return mixed
      */
     public function handle() {
-
         $wunderlist = new Wunderlist();
-        dd($wunderlist->getLists());
+        dd($wunderlist->getListNames());
     }
 }

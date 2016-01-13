@@ -7,7 +7,8 @@ class ProxyProductRepository implements ProductRepositoryInterface
      */
     public function getAll() {
         // Use guzzle to proxy to legacy codebase;
-        sleep(5);
+        sleep(2);
+        return [];
     }
 
     /**

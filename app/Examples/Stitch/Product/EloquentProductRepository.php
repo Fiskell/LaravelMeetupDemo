@@ -15,7 +15,8 @@ class EloquentProductRepository implements ProductRepositoryInterface
      * @return Product []
      */
     public function getAll() {
-        return $this->model->all();
+        return [];
+//        return $this->model->all();
     }
 
     /**

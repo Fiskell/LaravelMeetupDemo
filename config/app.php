@@ -161,6 +161,7 @@ return [
          */
         App\Providers\CandidateServiceProvider::class,
         App\Providers\GuzzleExampleServiceProvider::class,
+        App\Providers\ProductServiceProvider::class,
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
 
     ],

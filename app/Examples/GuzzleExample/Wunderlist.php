@@ -23,7 +23,7 @@ class Wunderlist
                 'X-Client-ID'    => getenv('WUNDERLIST_CLIENT_ID')];
     }
 
-    function getLists() {
+    function getListNames() {
         try {
             $lists = $this->client->request('GET', '/api/v1/lists', [
                 'headers' => $this->getDefaultHeaders()

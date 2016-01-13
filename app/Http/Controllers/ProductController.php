@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Examples\Stitch\Product\ProductRepositoryInterface;
+use App\Examples\Stitch\Product\ProxyProductRepository;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use Response;
 
 class ProductController extends Controller
 {
@@ -16,9 +16,8 @@ class ProductController extends Controller
      */
     protected $repository;
 
-    public function __construct(ProductRepositoryInterface $repo) {
-
-        $this->repository = $repo;
+    public function __construct() {
+        $this->repository = new ProxyProductRepository();
     }
 
     /**
