@@ -19,6 +19,20 @@ class GuzzleExample extends Command
      */
     public function handle() {
         $wunderlist = new Wunderlist();
+
         dd($wunderlist->getListNames());
+
+        /**
+         * TODO ide-helper
+         *
+         * Add ide helper to composer
+         *   composer require barryvdh/laravel-ide-helper
+         *
+         * Add service provider to app.php
+         *   Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+         *
+         * Run
+         *   php artisan ide-helper:meta
+         */
     }
 }
